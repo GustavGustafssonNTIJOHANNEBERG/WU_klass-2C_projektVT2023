@@ -1,0 +1,123 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#link_list a {
+    text-decoration: none;
+    letter-spacing: 0.1875rem;
+    color: black;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+
+}
+
+#burger div {
+    width: 25px;
+    height: 3px;
+    background-color: brown;
+    margin: 5px;
+    border-radius: 20%;
+
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+    background-color: gold;
+    border: 10px rgb(84, 45, 3) dotted;
+    grid-area: na;
+}
+
+#link_list {
+    z-index: -1;
+    background-color: gold;
+    height: 400px;
+    width: 200px;
+    position: absolute;
+    top: -400px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.5s;
+}
+
+#link_list li {
+    list-style: none;
+}
+
+#burger {
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.link_list_visible {
+    transform: translateY(500px);
+}
+
+.burger_in_x #burger_line_2 {
+    opacity: 0;
+}
+
+.burger_in_x #burger_line_1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger_in_x #burger_line_3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#grid_wrapper {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-rows: 100px 400px 400px 400px 400px 80px;
+    grid-template-areas: 
+        "he na"
+        "s1 s1"
+        "s2 s2"
+        "s3 s3"
+        "s4 s4"
+        "fo fo"
+        ;
+}
+
+#section_1 {
+    z-index: -2;
+    grid-area: s1;
+    background-color: paleturquoise;
+}
+
+#section_2 {
+    grid-area: s2;
+    background-color: orchid;
+}
+
+#section_3 {
+    grid-area: s3;
+    background-color: pink;
+}
+
+#section_4 {
+    grid-area: s4;
+    background-color: firebrick;
+}
+
+
+
+
+@media screen and (min-width: 700px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 50px;
+        padding: 50px;
+        background-color: salmon;
+    }
+
+}
