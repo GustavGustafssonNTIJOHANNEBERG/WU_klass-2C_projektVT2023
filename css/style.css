@@ -1,15 +1,15 @@
-* { 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 #link_list a {
     text-decoration: none;
     letter-spacing: 0.1875rem;
     color: black;
     font-size: 1.25rem;
     text-transform: uppercase;
+    font-family: 'Shrikhand', cursive;
 
 }
 
@@ -28,8 +28,9 @@ nav {
     align-items: center;
     height: 100px;
     background-color: gold;
-    border: 10px rgb(84, 45, 3) dotted;
     grid-area: na;
+    position: sticky;
+    top: 0
 }
 
 #link_list {
@@ -86,6 +87,11 @@ nav {
         ;
 }
 
+header {
+    grid-area: he;
+    background-color: aquamarine;
+}
+
 #section_1 {
     z-index: -2;
     grid-area: s1;
@@ -107,10 +113,17 @@ nav {
     background-color: firebrick;
 }
 
+footer {
+    grid-area: fo;
+    background-color: lavender;
+}
 
 
+
+   
 
 @media screen and (min-width: 700px) {
+    
     nav {
         display: flex;
         flex-direction: row;
@@ -119,5 +132,38 @@ nav {
         padding: 50px;
         background-color: salmon;
     }
-
+        
+    #burger {
+        display: none;
+    
+    }
+    
+    #grid_wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 100px 400px 400px 100px;
+        grid-template-areas: 
+        "na na"
+        "he he"
+        "s1 s2"
+        "s3 s4"
+        "fo fo"
+        ;
+    }
+    
+    #link_list {
+        z-index: 0;
+        height: auto;
+        width: 100%;
+        top: 25px;
+        right: 0px;
+        flex-direction: row;
+        justify-content: space-around;
+        transition: none;
+    }
+    
+    .link_list_visible {
+        transform: translateY(0px);
+    }
+    
+    
 }
