@@ -8,18 +8,18 @@ a {
     text-decoration: none;
     letter-spacing: 0.1875rem;
     color: black;
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-transform: uppercase;
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #link_list a {
     text-decoration: none;
     letter-spacing: 0.1875rem;
     color: black;
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-transform: uppercase;
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -90,7 +90,7 @@ nav {
 #grid_wrapper {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 200px;
-    grid-template-rows: 100px 400px 400px 400px 400px 80px;
+    grid-template-rows: 100px 400px 1000px 400px 400px 80px;
     grid-template-areas: 
         "he na"
         "s1 s1"
@@ -106,11 +106,11 @@ header {
     justify-content: center;
     align-items: center;
     grid-area: he;
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
 }
 
 #section_1 {
-    background-image: url(/img/japanskmakak1.jpg);
+    background-image: url(/img/nalle.jpg);
     background-size: cover;
     z-index: -2;
     grid-area: s1;
@@ -121,7 +121,10 @@ header {
 
 #section_2 {
     grid-area: s2;
-    background-color: orchid;
+    background-color: rgb(8, 6, 7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #section_3 {
@@ -134,13 +137,16 @@ header {
     background-color: firebrick;
 }
 
-footer {
+footer{
+    background-color: rgb(84, 117, 135);
+    height: 15vh;
+    display: flex;
+    justify-content: space-evenly;
     grid-area: fo;
-    background-color: lavender;
 }
 
 #event_article {
-    background-color: rgba(255 ,255, 255, 0.7);
+    background-color: rgba(255 ,255, 255, 0.5);
     width: 50%;
     height: 50%;
     border: solid 1px rgb(255, 255, 255);
@@ -151,13 +157,47 @@ footer {
 
 h2 {
     font-size: 2rem;
+    
 }
 
 h3 {
     font-size: 1.25rem;
+    
+}
+
+.black_text {
+    color: rgb(8, 6, 7);
+}
+
+.white_text {
+    color: rgb(255, 255, 255);
+}
+
+#aktuellt_title {
+    margin-top: 10px;
+}
+
+.artist_articles {
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px rgb(255, 255, 255);
 }
 
 
+#art_1 {
+    width: 300px;
+    height: auto;
+}
+
+#art_2 {
+    width: 300px;
+    height: auto;
+}
+
+#art_3 {
+   height: 300px;
+   width: auto;
+}
 
 @media screen and (min-width: 700px) {
     
