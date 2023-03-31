@@ -90,7 +90,7 @@ nav {
 #grid_wrapper {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 200px;
-    grid-template-rows: 100px 400px 1000px 400px 400px 80px;
+    grid-template-rows: 100px 400px 1000px 600px 100px 80px;
     grid-template-areas: 
         "he na"
         "s1 s1"
@@ -130,17 +130,26 @@ header {
 #section_3 {
     grid-area: s3;
     background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(8, 6, 7);
 }
 
 #section_4 {
     grid-area: s4;
-    background-color: firebrick;
+    background-color: rgb(8, 6, 7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer{
-    background-color: rgb(84, 117, 135);
+    background-color: rgb(255, 255, 255);
     height: 15vh;
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
     grid-area: fo;
 }
@@ -197,6 +206,25 @@ h3 {
 #art_3 {
    height: 300px;
    width: auto;
+}
+
+#section_3 p {
+    font-size: 1rem;
+    margin: 10px;
+}
+
+#section_3 h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#link_to_omoss_page {
+    background-color: rgb(255, 255, 255);
+    height: 75px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
 }
 
 @media screen and (min-width: 700px) {
