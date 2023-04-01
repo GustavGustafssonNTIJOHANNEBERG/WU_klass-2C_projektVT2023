@@ -26,7 +26,7 @@ a {
 #burger div {
     width: 25px;
     height: 3px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(3, 3, 3);
     margin: 5px;
     border-radius: 20%;
 
@@ -121,7 +121,7 @@ header {
 
 #section_2 {
     grid-area: s2;
-    background-color: rgb(8, 6, 7);
+    background-color: rgb(3, 3, 3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,13 +133,14 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 20px;
-    background-color: rgb(8, 6, 7);
+    background-color: rgb(3, 3, 3);
 }
 
 #section_4 {
     grid-area: s4;
-    background-color: rgb(8, 6, 7);
+    background-color: rgb(3, 3, 3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,7 +176,7 @@ h3 {
 }
 
 .black_text {
-    color: rgb(8, 6, 7);
+    color: rgb(3, 3, 3);
 }
 
 .white_text {
@@ -227,7 +228,7 @@ h3 {
     border-radius: 20px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
     
     nav {
         display: flex;
@@ -238,9 +239,7 @@ h3 {
         background-color: salmon;
     }
         
-    header{
-        display: none;
-    }
+  
 
     #burger {
         display: none;
@@ -249,10 +248,12 @@ h3 {
     
     #grid_wrapper {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 100px 400px 400px 100px;
+        grid-template-rows: 100px 100px 1000px 700px 500px 100px;
         grid-template-areas: 
+        "he he"
         "na na"
-        "s1 s2"
+        "s1 s1"
+        "s2 s2"
         "s3 s4"
         "fo fo"
         ;
@@ -272,6 +273,36 @@ h3 {
     .link_list_visible {
         transform: translateY(0px);
     }
-    
-    
+
+    #section_1 {
+        background-image: url(/img/nalle\ -\ kopia.jpg);
+        background-size: cover; 
+    }
+
+    #event_article {
+        background-color: rgba(255 ,255, 255, 0.5);
+        width: 40%;
+        height: 25%;
+        border: solid 1px rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #event_article h2 {
+        font-size: 2.5rem;
+    }
+    #event_article h3 {
+        font-size: 2rem;
+    }
+
+    #section_2 {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .artist_articles {
+        flex-direction: row;
+    }
+
 }
