@@ -2,6 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+
+#desktop {display: none;}
+
+.google_map {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google_map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
 }
 
 a {
@@ -87,6 +103,15 @@ nav {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+#om_oss_page{
+    background-color: rgb(3, 3, 3);
+    grid-area: s1;
+    display: flex;
+    flex-direction: column;
+    padding: 9%;
+    align-items: center;
+}
+
 #grid_wrapper {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 200px;
@@ -100,6 +125,31 @@ nav {
         "fo fo"
         ;
 }
+
+#grid_wrapper_2{
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-rows: 100px 1200px  80px;
+    grid-template-areas: 
+        "he na"
+        "s1 s1"
+        "fo fo"
+        ;
+}
+
+#grid_wrapper_3 {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-rows: 100px 500px 1000px 200px 80px;
+    grid-template-areas: 
+        "he na"
+        "s1 s1"
+        "s2 s2"
+        "s3 s3"
+        "fo fo"
+        ;
+}
+
 
 header {
     display: flex;
@@ -228,6 +278,28 @@ h3 {
     border-radius: 20px;
 }
 
+#intro_section{
+    grid-area: s1;
+    background-color: rgb(3, 3, 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#photo_section {
+    grid-area: s2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(3, 3, 3);
+}
+
+#map_section {
+    grid-area: s3;
+}
+
 @media screen and (min-width: 1000px) {
     
     nav {
@@ -296,13 +368,59 @@ h3 {
         font-size: 2rem;
     }
 
-    #section_2 {
-        flex-direction: row;
+    #section_2{
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    #div_artist_article{
+        display: flex;
+    }
+
+    #div_aktuellt_title{
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
 
-    .artist_articles {
-        flex-direction: row;
+    #artist_article2{
+        order: 10;
+    }
+  
+    nav  {
+        background-color: rgb(255, 255, 255);
+    }
+
+    #phone {display: none;}
+    #desktop {display: unset;}
+
+    #grid_wrapper_2 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 100px 1000px  100px;
+        grid-template-areas: 
+        "he he"
+        "na na"
+        "s1 s1"
+        "fo fo"
+        ;
+    }
+
+    #grid_wrapper_3 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 100px 1000px 700px 800px 100px;
+        grid-template-areas: 
+        "he he"
+        "na na"
+        "s1 s1"
+        "s2 s2"
+        "s3 s3"
+        "fo fo"
+        ;
+    }
+
+    #photo_section {
+       flex-direction: row; 
     }
 
 }
